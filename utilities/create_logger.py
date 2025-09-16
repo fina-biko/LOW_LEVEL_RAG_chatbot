@@ -4,12 +4,12 @@ import os
 
 from yaml_utils import read_yaml_log_path
 
-def create_logger( level: int = logging.INFO) -> logging.Logger:
+def create_logger(name: str, level: int = logging.INFO) -> logging.Logger:
     """
     Create and configure a logger.
 
     Args:
-        name (str): The name of the logger.
+      
         level (int): The logging level (default is logging.INFO).
 
     Returns:
@@ -19,17 +19,16 @@ def create_logger( level: int = logging.INFO) -> logging.Logger:
     filepath=read_yaml_log_path()
 
   # set the logger to have the name of the module
-    logger = logging.getLogger(__name__)
+    logger = logging.getLogger(name)
 
     #give the logger the level of log
     logger.setLevel(level)
 
     # Create console handler and set level to the console handler
+    ch = logging.StreamHandler()
+    ch.setLevel(level)
 
-  
-   
-
-    #create file handler and set level to file handler
+      #create file handler and set level to file handler
     
 
     if 'log_file' in filepath:
@@ -45,18 +44,24 @@ def create_logger( level: int = logging.INFO) -> logging.Logger:
     else:
         fh = logging.FileHandler('logs/app.log')
         fh.setLevel(level)
+   
+
+  
+    
     # Create formatter
     formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 
     # Add formatter to console handler
     fh.setFormatter(formatter)
+    ch.setFormatter(formatter)
 
     # Add console handler to logger
     if not logger.hasHandlers():
         logger.addHandler(fh)
+        logger.addHandler(ch)
 
     return logger
 
 if __name__ == "__main__":
-    logger = create_logger()
+    logger = create_logger(name=__name__, level=logging.DEBUG)
     logger.info("Logger has been created successfully.")

@@ -17,7 +17,7 @@ files=[
     'utilities/create_logger.py',
      'utilities/__init__.py',
     'utilities/exception.py',
-
+        
     'utilities/yaml_utils.py',
     'logs/app.log'
 
