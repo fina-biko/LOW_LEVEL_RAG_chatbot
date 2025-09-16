@@ -4,7 +4,8 @@ folders=[
     'docs',
     'utilities',
     'config',
-    'logs'
+    'logs',
+    'src'
 
    
 
@@ -13,6 +14,9 @@ files=[
 
     
     'docs/design.md',
+    'src/__init__.py',
+    'src/extractor.py',
+    
     'config/config.yaml',
     'utilities/create_logger.py',
      'utilities/__init__.py',
