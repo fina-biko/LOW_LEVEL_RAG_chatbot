@@ -11,7 +11,7 @@ pseudocode:
 
     exractors: PDF extractor, word extractor
 
-    logging module: logs al activites of the file
+    logging module: logs al activites of the file. settings of the log file in config
 
     exception handling: input not a path to file, 
                         error loading the pdf

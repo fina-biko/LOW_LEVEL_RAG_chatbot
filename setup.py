@@ -2,7 +2,10 @@
 import os
 folders=[
     'docs',
-    'utilities'
+    'utilities',
+    'config',
+    'logs'
+
    
 
 ]
@@ -10,8 +13,13 @@ files=[
 
     
     'docs/design.md',
+    'config/config.yaml',
     'utilities/create_logger.py',
-    'utilities/exception.py'
+     'utilities/__init__.py',
+    'utilities/exception.py',
+
+    'utilities/yaml_utils.py',
+    'logs/app.log'
 
     
    
