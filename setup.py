@@ -1,0 +1,47 @@
+
+import os
+folders=[
+    'docs',
+    'utilities'
+   
+
+]
+files=[
+
+    
+    'docs/design.md',
+    'utilities/create_logger.py',
+    'utilities/exception.py'
+
+    
+   
+    
+
+]
+
+def create_folders():
+    """
+    for folder string  in folders:
+    make it an actual folder by using os.makedir
+
+    for file string in files:
+    check if the file actually exists
+    if not ope the file for editing
+    
+    """
+    for dir in folders:
+        os.makedirs(dir,exist_ok=True)
+
+
+def create_files():
+    for file in files:
+        if not os.path.exists(file):
+            with open(file,'w') as f:
+                pass
+        else:
+           print("file already exists")
+
+
+if __name__=="__main__":
+    create_folders()
+    create_files()
