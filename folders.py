@@ -20,6 +20,7 @@ files=[
      'src/__init__.py',
     #'src/low_level_rag/__init__.py',
     'src/low_level_rag/extractor.py',
+    'src/low_level_rag/DataextractorFactory.py',
     
     'config/config.yaml',
     'utilities/create_logger.py',
