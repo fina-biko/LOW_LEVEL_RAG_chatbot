@@ -60,6 +60,8 @@ def create_logger(name: str, level: int = logging.INFO) -> logging.Logger:
         logger.addHandler(fh)
         logger.addHandler(ch)
 
+        
+
     return logger
 
 if __name__ == "__main__":

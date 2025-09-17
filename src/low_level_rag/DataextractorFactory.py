@@ -29,7 +29,7 @@ class ExtractorFactory:
         return cls._registry
 
     @classmethod
-    def create_extractor(cls, filepath: str):
+    def find_extractor(cls, filepath: str):
         #should just take the filepath
         #extract file ext from the filepath
         ext=os.path.splitext(filepath)[1]
@@ -39,7 +39,7 @@ class ExtractorFactory:
             class_type=cls._registry[ext]
             logger.info(f"Found extractor class {class_type} for extension {ext}")
             #return an instance of the class
-            return class_type('filepath')
+            return class_type(filepath)
         else:
             error_msg=f"No extractor registered for extension: {ext}"
             logger.error(error_msg)
@@ -57,14 +57,14 @@ class ExtractorFactory:
             
 if __name__ == "__main__":
     # Register a dummy extractor using a built-in class (e.g., list)
-    #print(ExtractorFactory.register_extractor(".pdf", list))
-    #print(ExtractorFactory.register_extractor(".txt", dict))
+    print(ExtractorFactory.register_extractor(".pdf", list))
+    print(ExtractorFactory.register_extractor(".txt", dict))
 
     #show the registered extractors
     print(ExtractorFactory.show_registered_extractors())
     print("---------------------------------------------------")
     
-    print(ExtractorFactory.create_extractor("sample.pdf"))
+    print(ExtractorFactory.find_extractor("sample.pdf"))
     print("---------------------------------------------------")
 
    #show the registered extractors

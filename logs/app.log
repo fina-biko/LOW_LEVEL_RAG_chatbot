@@ -71,3 +71,31 @@ ZeroDivisionError: division by zero
 2025-09-18 00:20:09,836 - __main__ - INFO - Registered extractors: {}
 2025-09-18 00:20:09,836 - __main__ - INFO - Creating extractor for file: sample.pdf with extension: .pdf
 2025-09-18 00:20:09,837 - __main__ - ERROR - No extractor registered for extension: .pdf
+2025-09-18 01:12:42,037 - __main__ - INFO - registered extractor for .pdf : <class 'list'>
+2025-09-18 01:12:42,039 - __main__ - INFO - registered extractor for .txt : <class 'dict'>
+2025-09-18 01:12:42,040 - __main__ - INFO - Registered extractors: {'.pdf': <class 'list'>, '.txt': <class 'dict'>}
+2025-09-18 01:12:42,041 - __main__ - INFO - Creating extractor for file: sample.pdf with extension: .pdf
+2025-09-18 01:12:42,042 - __main__ - INFO - Found extractor class <class 'list'> for extension .pdf
+2025-09-18 01:12:42,043 - __main__ - INFO - Registered extractors: {'.pdf': <class 'list'>, '.txt': <class 'dict'>}
+2025-09-18 01:14:56,556 - __main__ - INFO - registered extractor for .pdf : <class 'list'>
+2025-09-18 01:14:56,558 - __main__ - INFO - registered extractor for .txt : <class 'dict'>
+2025-09-18 01:14:56,558 - __main__ - INFO - Registered extractors: {'.pdf': <class 'list'>, '.txt': <class 'dict'>}
+2025-09-18 01:14:56,559 - __main__ - INFO - Creating extractor for file: sample.pdf with extension: .pdf
+2025-09-18 01:14:56,560 - __main__ - INFO - Found extractor class <class 'list'> for extension .pdf
+2025-09-18 01:14:56,560 - __main__ - INFO - Registered extractors: {'.pdf': <class 'list'>, '.txt': <class 'dict'>}
+2025-09-18 01:15:33,269 - __main__ - INFO - registered extractor for .pdf : <class 'list'>
+2025-09-18 01:15:33,270 - __main__ - INFO - registered extractor for .txt : <class 'dict'>
+2025-09-18 01:15:33,270 - __main__ - INFO - Registered extractors: {'.pdf': <class 'list'>, '.txt': <class 'dict'>}
+2025-09-18 01:15:33,271 - __main__ - INFO - Creating extractor for file: sample.pdf with extension: .pdf
+2025-09-18 01:15:33,272 - __main__ - INFO - Found extractor class <class 'list'> for extension .pdf
+2025-09-18 01:15:33,273 - __main__ - INFO - Registered extractors: {'.pdf': <class 'list'>, '.txt': <class 'dict'>}
+2025-09-18 01:18:50,662 - __main__ - INFO - register_extractor file has registered extractor for .pdf : <class 'list'>
+2025-09-18 01:18:50,693 - __main__ - INFO - register_extractor file has registered extractor for .txt : <class 'dict'>
+2025-09-18 01:18:50,703 - __main__ - INFO - Registered extractors: {'.pdf': <class 'list'>, '.txt': <class 'dict'>}
+2025-09-18 01:18:50,703 - __main__ - INFO - Creating extractor for file: sample.pdf with extension: .pdf
+2025-09-18 01:18:50,704 - __main__ - INFO - Found extractor class <class 'list'> for extension .pdf
+2025-09-18 01:18:50,704 - __main__ - INFO - Registered extractors: {'.pdf': <class 'list'>, '.txt': <class 'dict'>}
+2025-09-18 01:21:33,276 - src.low_level_rag.DataextractorFactory - INFO - register_extractor file has registered extractor for .pdf : <class '__main__.PDFExtractor'>
+2025-09-18 01:21:33,282 - __main__ - INFO - Registered extractor PDFExtractor for extension .pdf
+2025-09-18 01:23:09,071 - src.low_level_rag.DataextractorFactory - INFO - registered extractor for .pdf : <class '__main__.PDFExtractor'>
+2025-09-18 01:23:09,081 - __main__ - INFO - Registered extractor PDFExtractor for extension .pdf
