@@ -11,6 +11,8 @@ pseudocode:
 
     exractors: PDF extractor, word extractor
 
+    Based on the filetype, the right extractor should be called:(factory implementation)
+
     logging module: logs al activites of the file. settings of the log file in config
 
     exception handling: input not a path to file, 

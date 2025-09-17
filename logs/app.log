@@ -26,3 +26,11 @@ Traceback (most recent call last):
 ZeroDivisionError: division by zero
 2025-09-17 08:08:18,514 - __main__ - INFO - Logger has been created successfully.
 2025-09-17 08:22:35,180 - __main__ - INFO - Logger has been created successfully.
+2025-09-17 09:05:56,892 - __main__ - INFO - This is an info message from extractor module.
+2025-09-17 09:05:56,905 - __main__ - INFO - Extracted data from PDF: [('Sample PDF text', 'metadata')]
+2025-09-17 19:19:31,104 - __main__ - INFO - This is an info message from extractor module.
+2025-09-17 19:19:31,106 - __main__ - INFO - Extracted data from PDF: [('Sample PDF text', 'metadata')]
+2025-09-17 19:48:11,524 - __main__ - INFO - This is an info message from extractor module.
+2025-09-17 19:48:11,525 - __main__ - INFO - Extracted data from PDF: [('Sample PDF text', 'metadata')]
+2025-09-17 19:49:26,361 - __main__ - INFO - This is an info message from extractor module.
+2025-09-17 19:49:26,362 - __main__ - INFO - Extracted data from PDF: [('Sample PDF text', 'metadata')]

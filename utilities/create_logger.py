@@ -2,7 +2,7 @@ import logging
 import os
 
 
-from yaml_utils import read_yaml_log_path
+from utilities.yaml_utils import read_yaml_log_path
 
 def create_logger(name: str, level: int = logging.INFO) -> logging.Logger:
     """

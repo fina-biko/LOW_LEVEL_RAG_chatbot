@@ -5,7 +5,8 @@ folders=[
     'utilities',
     'config',
     'logs',
-    'src'
+    'src',
+    'src/low_level_rag',
 
    
 
@@ -13,10 +14,12 @@ folders=[
 files=[
 
     'pyproject.toml',
+    'gitignore',
     'README.md',
     'docs/design.md',
-    'src/__init__.py',
-    'src/extractor.py',
+     'src/__init__.py',
+    #'src/low_level_rag/__init__.py',
+    'src/low_level_rag/extractor.py',
     
     'config/config.yaml',
     'utilities/create_logger.py',
