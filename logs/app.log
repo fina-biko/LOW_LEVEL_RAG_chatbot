@@ -24,3 +24,5 @@ Traceback (most recent call last):
     result = 1 / 0  # Example to raise an exception
              ~~^~~
 ZeroDivisionError: division by zero
+2025-09-17 08:08:18,514 - __main__ - INFO - Logger has been created successfully.
+2025-09-17 08:22:35,180 - __main__ - INFO - Logger has been created successfully.

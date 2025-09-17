@@ -63,5 +63,5 @@ def create_logger(name: str, level: int = logging.INFO) -> logging.Logger:
     return logger
 
 if __name__ == "__main__":
-    logger = create_logger(name=__name__, level=logging.DEBUG)
+    logger = create_logger(name=__name__,level=logging.INFO)
     logger.info("Logger has been created successfully.")

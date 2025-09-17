@@ -12,7 +12,8 @@ folders=[
 ]
 files=[
 
-    
+    'pyproject.toml',
+    'README.md',
     'docs/design.md',
     'src/__init__.py',
     'src/extractor.py',
