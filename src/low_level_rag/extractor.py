@@ -33,7 +33,7 @@ class DocumentExtractor(ABC):
         #call the registry and register the ext and the class type
         from .DataextractorFactory import ExtractorFactory
         ExtractorFactory.register_extractor(ext, cls)
-        create_logger(__name__,level=logging.INFO).info(f"Registered extractor {name} for extension {ext}")
+        create_logger(__name__,level=logging.INFO).info(f"Registered  new extractor {name} for extension {ext}")
        
 
     @abstractmethod
@@ -44,6 +44,11 @@ class DocumentExtractor(ABC):
 
 class PDFExtractor(DocumentExtractor):
     extension = ".pdf"
+    """   what do we need for a pdf? 
+    we need to conirm if the pdf path is a valid, but this is the work of the
+    factory, to check if the visitor it gets is valid before directing it to the worker
+    else the worker in the factory may be letting in an alshababa, so it is 
+    done in the factory class"""
 
     
     def extract(self, ) -> List[Tuple[str, str]]:
@@ -51,6 +56,7 @@ class PDFExtractor(DocumentExtractor):
         return [("this is a Sample PDF text", "metadata")]
     
 if __name__ == "__main__":
-    pdf_extractor = PDFExtractor("sample.pdf")
+    filepath=r"C:\Users\User\Downloads\Cloud Concepts [Slides].pdf"
+    pdf_extractor = PDFExtractor(filepath)
     extracted_data = pdf_extractor.extract()
     print(extracted_data)

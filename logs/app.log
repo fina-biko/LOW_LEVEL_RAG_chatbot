@@ -99,3 +99,27 @@ ZeroDivisionError: division by zero
 2025-09-18 01:21:33,282 - __main__ - INFO - Registered extractor PDFExtractor for extension .pdf
 2025-09-18 01:23:09,071 - src.low_level_rag.DataextractorFactory - INFO - registered extractor for .pdf : <class '__main__.PDFExtractor'>
 2025-09-18 01:23:09,081 - __main__ - INFO - Registered extractor PDFExtractor for extension .pdf
+2025-09-19 23:25:18,335 - __main__ - INFO - Logger has been created successfully.
+2025-09-19 23:26:09,842 - __main__ - INFO - Logger has been created successfully.
+2025-09-19 23:27:24,606 - __main__ - INFO - Logger has been created successfully.
+2025-09-19 23:28:16,122 - __main__ - ERROR - An error occurred
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\L0W_LEVEL_RAG\utilities\exception.py", line 17, in <module>
+    result = 1 / 0  # Example to raise an exception
+             ~~^~~
+ZeroDivisionError: division by zero
+2025-09-19 23:29:54,546 - __main__ - INFO - Registered extractors: {}
+2025-09-19 23:30:48,087 - __main__ - ERROR - An error occurred
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\L0W_LEVEL_RAG\utilities\exception.py", line 17, in <module>
+    result = 1 / 0  # Example to raise an exception
+             ~~^~~
+ZeroDivisionError: division by zero
+2025-09-19 23:30:55,775 - __main__ - INFO - Registered extractors: {}
+2025-09-19 23:30:55,778 - utilities.exception - ERROR - An error occurred
+FileNotFoundError: The file path sample.pdf does not exist.
+2025-09-19 23:32:46,090 - __main__ - INFO - Registered extractors: {}
+2025-09-19 23:32:46,092 - __main__ - INFO - Creating extractor for file: C:\Users\User\Downloads\Cloud Concepts [Slides].pdf with extension: .pdf
+2025-09-19 23:32:46,093 - __main__ - ERROR - No extractor registered for extension: .pdf
+2025-09-19 23:34:18,330 - src.low_level_rag.DataextractorFactory - INFO - registered extractor for .pdf : <class '__main__.PDFExtractor'>
+2025-09-19 23:34:18,334 - __main__ - INFO - Registered  new extractor PDFExtractor for extension .pdf

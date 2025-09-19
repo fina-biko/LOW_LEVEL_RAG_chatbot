@@ -13,6 +13,7 @@ folders=[
 ]
 files=[
 
+     'notebook.ipynb',
     'pyproject.toml',
     'gitignore',
     'README.md',
