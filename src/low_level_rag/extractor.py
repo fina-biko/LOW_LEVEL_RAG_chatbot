@@ -37,7 +37,7 @@ class DocumentExtractor(ABC):
        
 
     @abstractmethod
-    def extract(self) -> List[Tuple[str, str]]:
+    def extract(self) -> List[Tuple[int, str]]:
         #take a file path and extracts text
         pass
 
@@ -45,18 +45,36 @@ class DocumentExtractor(ABC):
 class PDFExtractor(DocumentExtractor):
     extension = ".pdf"
     """   what do we need for a pdf? 
-    we need to conirm if the pdf path is a valid, but this is the work of the
-    factory, to check if the visitor it gets is valid before directing it to the worker
-    else the worker in the factory may be letting in an alshababa, so it is 
-    done in the factory class"""
+    we need to confirm if the pdf path is valid, but this is the work of the
+    factory, to check if the visitor it gets is valid before directing it to the worker.
+    Else the worker in the factory may be letting in an invalid file, so it is 
+    done in the factory class.
+
+    So we should extract the data here and return each page as a tuple of (metadata and text.)
+    the reader object returns the extracted text,in string format, so we can just return it as a tuple"""
 
     
-    def extract(self, ) -> List[Tuple[str, str]]:
+    def extract(self, ) -> List[Tuple[int, str]]:
         # Dummy implementation for PDF extraction
-        return [("this is a Sample PDF text", "metadata")]
-    
+        
+        # Use a PDF library like PyPDF2 or pdfminer to extract text from PDF files
+        from pypdf import PdfReader
+        reader_object=PdfReader(self.filepath)
+        #list contains tuples of (page_number, text)
+        extracted_text:list[Tuple[int, str]]=[]
+        for pair in enumerate(reader_object.pages):
+
+            extracted_text.append((pair[0], pair[1].extract_text()))
+        logger.info(f"Successfully extracted text from PDF: {self.filepath}")
+
+
+
+        return extracted_text
+
 if __name__ == "__main__":
-    filepath=r"C:\Users\User\Downloads\Cloud Concepts [Slides].pdf"
-    pdf_extractor = PDFExtractor(filepath)
+    filepath_1=r"C:\Users\User\Desktop\michelle.pdf"
+    filepath = r"C:\\Users\\User\\Downloads\\Cloud Concepts [Slides].pdf"
+    pdf_extractor = PDFExtractor(filepath_1)
     extracted_data = pdf_extractor.extract()
+   
     print(extracted_data)

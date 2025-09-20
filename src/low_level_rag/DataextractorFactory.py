@@ -47,7 +47,7 @@ class ExtractorFactory:
     
 
     @classmethod
-    def find_extractor(cls, filepath: str):
+    def find_extractor(cls, filepath: str)->type:
         #should just take the filepath and confirm if its  a path and is valid , then call the 
         #extractor, if not valid then this path has no bysiness in its factory
         if ExtractorFactory._isvalid(filepath=filepath):
