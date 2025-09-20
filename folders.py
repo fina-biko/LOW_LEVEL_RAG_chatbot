@@ -22,6 +22,9 @@ files=[
     #'src/low_level_rag/__init__.py',
     'src/low_level_rag/extractor.py',
     'src/low_level_rag/DataextractorFactory.py',
+    'src/preprocess.py',
+    'src/chunking.py',
+    'src/vector_store.py',
     
     'config/config.yaml',
     'utilities/create_logger.py',

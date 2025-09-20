@@ -58,18 +58,23 @@ class PDFExtractor(DocumentExtractor):
         # Dummy implementation for PDF extraction
         
         # Use a PDF library like PyPDF2 or pdfminer to extract text from PDF files
-        from pypdf import PdfReader
-        reader_object=PdfReader(self.filepath)
-        #list contains tuples of (page_number, text)
-        extracted_text:list[Tuple[int, str]]=[]
-        for pair in enumerate(reader_object.pages):
+        try:
+            from pypdf import PdfReader
+            reader_object=PdfReader(self.filepath)
+            #list contains tuples of (page_number, text)
+            extracted_text:list[Tuple[int, str]]=[]
+            for pair in enumerate(reader_object.pages):
 
-            extracted_text.append((pair[0], pair[1].extract_text()))
-        logger.info(f"Successfully extracted text from PDF: {self.filepath}")
+                extracted_text.append((pair[0], pair[1].extract_text()))
+            logger.info(f"Successfully extracted text from PDF: {self.filepath}")
 
 
 
-        return extracted_text
+            return extracted_text       
+        except Exception as e:
+            logger.error(f"Error extracting text from PDF: {self.filepath}, Error: {e}")
+            #raise extration error
+            raise e
 
 if __name__ == "__main__":
     filepath_1=r"C:\Users\User\Desktop\michelle.pdf"

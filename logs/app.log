@@ -126,3 +126,9 @@ FileNotFoundError: The file path sample.pdf does not exist.
 2025-09-20 16:35:48,952 - src.low_level_rag.DataextractorFactory - INFO - registered extractor for .pdf : <class '__main__.PDFExtractor'>
 2025-09-20 16:35:48,956 - __main__ - INFO - Registered  new extractor PDFExtractor for extension .pdf
 2025-09-20 16:35:50,392 - __main__ - INFO - Successfully extracted text from PDF: C:\Users\User\Desktop\michelle.pdf
+2025-09-20 17:13:13,363 - src.low_level_rag.DataextractorFactory - INFO - registered extractor for .pdf : <class '__main__.PDFExtractor'>
+2025-09-20 17:13:13,366 - __main__ - INFO - Registered  new extractor PDFExtractor for extension .pdf
+2025-09-20 17:13:13,369 - __main__ - ERROR - Error extracting text from PDF: C:\Users\User\Desktop\michelle.pdf, Error: No module named 'pypdf'
+2025-09-20 17:16:49,927 - src.low_level_rag.DataextractorFactory - INFO - registered extractor for .pdf : <class '__main__.PDFExtractor'>
+2025-09-20 17:16:49,930 - __main__ - INFO - Registered  new extractor PDFExtractor for extension .pdf
+2025-09-20 17:16:50,434 - __main__ - INFO - Successfully extracted text from PDF: C:\Users\User\Desktop\michelle.pdf
