@@ -6,6 +6,8 @@ from typing import List, Tuple
 from utilities.create_logger import create_logger
 import logging
 
+from utilities.exception import PDFExtractionError
+
 
 logger = logging.getLogger(__name__)
 
@@ -55,9 +57,28 @@ class PDFExtractor(DocumentExtractor):
 
     
     def extract(self, ) -> List[Tuple[int, str]]:
-        # Dummy implementation for PDF extraction
-        
-        # Use a PDF library like PyPDF2 or pdfminer to extract text from PDF files
+        """
+        Extract text from a PDF file, returning page numbers and their corresponding text.
+
+        This method uses the `pypdf.PdfReader` to read the file located at 
+        `self.filepath`. For each page in the PDF, the extracted text is stored 
+        along with its page number as a tuple `(page_number, text)`. 
+
+        Returns:
+            List[Tuple[int, str]]: 
+                A list of tuples where each tuple contains:
+                - int: The page number (starting from 0).
+                - str: The extracted text content of that page.
+
+        Raises:
+            Exception: If any error occurs during PDF reading or text extraction.
+
+        Example:
+            >>> extractor = PDFExtractor("sample.pdf")
+            >>> pages = extractor.extract()
+            >>> print(pages[0])
+            (0, "This is the text from the first page...")
+        """
         try:
             from pypdf import PdfReader
             reader_object=PdfReader(self.filepath)
@@ -73,8 +94,7 @@ class PDFExtractor(DocumentExtractor):
             return extracted_text       
         except Exception as e:
             logger.error(f"Error extracting text from PDF: {self.filepath}, Error: {e}")
-            #raise extration error
-            raise e
+            raise PDFExtractionError(self.filepath, e)
 
 if __name__ == "__main__":
     filepath_1=r"C:\Users\User\Desktop\michelle.pdf"
