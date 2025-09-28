@@ -78,12 +78,19 @@ class TextPreprocessor:
     def process_text(self,  text: list[Tuple[int, str]]) -> list:
         """
 
-        Processes a list of (page, text) tuples, applying cleaning to each text entry.
+                    Input: The list of tuples from Step 1.
 
-        Returns:
-            str: The cleaned, normalized text.
-        
-        """
+            Method: reprocessor
+
+            Iterate through (page_num, raw_text) tuples.
+
+            Call the cleaning function only on raw_text.
+
+            Crucially, return the cleaned result paired with the page number.
+
+            Output: A list of tuples with cleaned text: [(page_num, cleaned_text), (page_2_num, cleaned_text), ...]
+                Processes a list of (page_num, text) tuples or a 2D list of such tuples,    
+                """
         #log the shape of the text
         shape = self._get_input_shape(text)
         if shape:
@@ -156,7 +163,7 @@ if __name__ == "__main__":
                   20)
 
         # --- Test Case 3: Error Handling (Invalid Type) ---
-         print("--- Test Case 3: Error Handling ---")
+        #  print("--- Test Case 3: Error Handling ---")
 
     except Exception as e:
      logger.error("An unexpected error occurred in the main execution block.")

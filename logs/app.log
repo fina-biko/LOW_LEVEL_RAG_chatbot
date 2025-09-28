@@ -1,6 +1,278 @@
-2025-09-28 16:50:10,920 - __main__ - INFO - Starting the preprocessing pipeline...
-2025-09-28 16:50:10,932 - src.low_level_rag.DataextractorFactory - INFO - registered extractor for .pdf : <class 'src.low_level_rag.extractor.PDFExtractor'>
-2025-09-28 16:50:10,933 - src.low_level_rag.extractor - INFO - Documentextrator: Registered  new extractor PDFExtractor for extension .pdf
-2025-09-28 16:50:11,235 - src.low_level_rag.extractor - INFO - Successfully extracted text from PDF: C:\Users\User\Desktop\michelle.pdf
-2025-09-28 16:50:11,235 - __main__ - INFO - shape detected as 2D list of tuples
-2025-09-28 16:50:11,235 - __main__ - INFO - Input text  detected is: 1D
+2025-09-29 00:07:11,827 - __main__ - INFO - Starting the preprocessing pipeline...
+2025-09-29 00:07:11,840 - src.low_level_rag.DataextractorFactory - INFO - registered extractor for .pdf : <class 'src.low_level_rag.extractor.PDFExtractor'>
+2025-09-29 00:07:11,842 - src.low_level_rag.extractor - INFO - Documentextrator: Registered  new extractor PDFExtractor for extension .pdf
+2025-09-29 00:07:12,211 - src.low_level_rag.extractor - INFO - Successfully extracted text from PDF: C:\Users\User\Desktop\michelle.pdf
+2025-09-29 00:07:12,212 - src.low_level_rag.preprocess - INFO - shape detected as 2D list of tuples
+2025-09-29 00:07:12,212 - src.low_level_rag.preprocess - INFO - Input text  detected is: 1D
+2025-09-29 00:07:12,217 - __main__ - INFO - this is words after splitting based on white space: ['MICHELE', 'ACHIENG,', 'P.O', 'Box', '10369-00100,', 'NAIROBI.', 'TO', 'THE', 'HEADTEACHER', 'KILIMANI', 'JUNIOR', 'SCHOOL', 'P.O', 'BOX', '21557-00505', 'NAIROBI', 'Dear', 'sir/Madam', 'RE:', 'APPLICATION', 'FOR', 'A', 'PRIMARY', 'TEACHER', 'SCHOOL', 'POSITION', 'I', 'wish', 'to', 'apply', 'for', 'the', 'position', 'of', 'a', 'pri', 'mary', 'teacher', 'in', 'your', 'school.', 'I', 'am', 'a', 'trained', 'P1', 'teacher', 'and', 'I', 'am', 'confident', 'that', 'my', 'educational', 'background', 'and', 'work', 'experience', 'skills', 'will', 'be', 'of', 'great', 'value', 'to', 'your', 'school.', 'As', 'a', 'gr', 'aduate', 'teacher,', 'have', 'experienced', 'many', 'skills', 'to', 'work', 'with', 'a', 'varie', 'ty', 'of', 'professional', 'teaching', 'team', 'and', 'gained', 'valuable', 'insight', 'into', 'the', 'role', 'of', 'a', 'primary', 'school', 'teacher.', 'Previously,', 'I', 'worked', 'in', 'a', 'school', 'where', 'I', 'managed', 'to', 'demonstrate', 'excellent', 'planning,', 'communication', 'and', 'teamwork', 'skills.', 'My', 'pos', 'ition', 'for', 'the', 'young', 'has', 'enabl', 'ed', 'me', 'to', 'pro', 'vide', 'excellent', 'learning', 'opportunities', 'within', 'each', 'classroom', 'I', 'have', 'been', 'placed.', 'I', 'am', 'a', 'dedicated', 'teacher', 'with', 'a', 'great', 'deal', 'of', 'Knowledge', 'and', 'skills', 'as', 'well', 'as', 'passion', 'and', 'enthusi', 'asm', 'for', 'working', 'with', 'chi', 'ldren', 'and', 'teaching', 'in', 'the', 'area', 'of', 'primary', 'school', 'education.', 'I', 'am', 'self', 'motivated', 'and', 'can', 'work', 'cooper', 'atively', 'in', 'a', 'team', 'situation', 'or', 'on', 'own.', 'I', 'have', 'always', 'provided', 'myself', 'on', 'being', 'able', 'to', 'fit', 'and', 'get', 'along', 'with', 'others.', 'Please', 'find', 'attached', 'copy', 'of', 'my', 'Curriculum', 'Vitae', 'along', 'with', 'my', 'documents.', 'Do', 'not', 'hesitate', 'to', 'contact', 'me', 'as', 'at', 'your', 'school', 'convenience', 'as', 'I', 'look', 'forward', 'to', 'further', 'discussing', 'this', 'application', 'with', 'you.', 'Thank', 'you', 'for', 'taking', 'your', 'time', 'to', 'consider', 'my', 'suitability', 'for', 'your', 'school', 'and', 'confidence', 'that', 'I', 'can', 'bring', 'the', 'necessary', 'skills.', 'Yours', 'sincerely,', 'ACHIENG', 'MICHELE']
+2025-09-29 00:07:12,217 - __main__ - INFO - 
+--- Processing Page 0 ---
+2025-09-29 00:07:12,217 - __main__ - INFO - Content (Cleaned Words): ['MICHELE', 'ACHIENG,', 'P.O', 'Box', '10369-00100,', 'NAIROBI.', 'TO', 'THE', 'HEADTEACHER', 'KILIMANI', 'JUNIOR', 'SCHOOL', 'P.O', 'BOX', '21557-00505', 'NAIROBI', 'Dear', 'sir/Madam', 'RE:', 'APPLICATION', 'FOR', 'A', 'PRIMARY', 'TEACHER', 'SCHOOL', 'POSITION', 'I', 'wish', 'to', 'apply', 'for', 'the', 'position', 'of', 'a', 'pri', 'mary', 'teacher', 'in', 'your', 'school.', 'I', 'am', 'a', 'trained', 'P1', 'teacher', 'and', 'I', 'am', 'confident', 'that', 'my', 'educational', 'background', 'and', 'work', 'experience', 'skills', 'will', 'be', 'of', 'great', 'value', 'to', 'your', 'school.', 'As', 'a', 'gr', 'aduate', 'teacher,', 'have', 'experienced', 'many', 'skills', 'to', 'work', 'with', 'a', 'varie', 'ty', 'of', 'professional', 'teaching', 'team', 'and', 'gained', 'valuable', 'insight', 'into', 'the', 'role', 'of', 'a', 'primary', 'school', 'teacher.', 'Previously,', 'I', 'worked', 'in', 'a', 'school', 'where', 'I', 'managed', 'to', 'demonstrate', 'excellent', 'planning,', 'communication', 'and', 'teamwork', 'skills.', 'My', 'pos', 'ition', 'for', 'the', 'young', 'has', 'enabl', 'ed', 'me', 'to', 'pro', 'vide', 'excellent', 'learning', 'opportunities', 'within', 'each', 'classroom', 'I', 'have', 'been', 'placed.', 'I', 'am', 'a', 'dedicated', 'teacher', 'with', 'a', 'great', 'deal', 'of', 'Knowledge', 'and', 'skills', 'as', 'well', 'as', 'passion', 'and', 'enthusi', 'asm', 'for', 'working', 'with', 'chi', 'ldren', 'and', 'teaching', 'in', 'the', 'area', 'of', 'primary', 'school', 'education.', 'I', 'am', 'self', 'motivated', 'and', 'can', 'work', 'cooper', 'atively', 'in', 'a', 'team', 'situation', 'or', 'on', 'own.', 'I', 'have', 'always', 'provided', 'myself', 'on', 'being', 'able', 'to', 'fit', 'and', 'get', 'along', 'with', 'others.', 'Please', 'find', 'attached', 'copy', 'of', 'my', 'Curriculum', 'Vitae', 'along', 'with', 'my', 'documents.', 'Do', 'not', 'hesitate', 'to', 'contact', 'me', 'as', 'at', 'your', 'school', 'convenience', 'as', 'I', 'look', 'forward', 'to', 'further', 'discussing', 'this', 'application', 'with', 'you.', 'Thank', 'you', 'for', 'taking', 'your', 'time', 'to', 'consider', 'my', 'suitability', 'for', 'your', 'school', 'and', 'confidence', 'that', 'I', 'can', 'bring', 'the', 'necessary', 'skills.', 'Yours', 'sincerely,', 'ACHIENG', 'MICHELE']
+2025-09-29 00:07:12,217 - __main__ - INFO - this is chunk list for 0: ['MICHELE', 'ACHIENG,', 'P.O']
+2025-09-29 00:07:12,217 - __main__ - INFO - Added chunk for page 0: 'MICHELE ACHIENG, P.O'
+2025-09-29 00:07:12,218 - __main__ - INFO - this is chunk list for 0: ['P.O', 'Box', '10369-00100,']
+2025-09-29 00:07:12,218 - __main__ - INFO - Added chunk for page 0: 'P.O Box 10369-00100,'
+2025-09-29 00:07:12,218 - __main__ - INFO - this is chunk list for 0: ['10369-00100,', 'NAIROBI.', 'TO']
+2025-09-29 00:07:12,218 - __main__ - INFO - Added chunk for page 0: '10369-00100, NAIROBI. TO'
+2025-09-29 00:07:12,218 - __main__ - INFO - this is chunk list for 0: ['TO', 'THE', 'HEADTEACHER']
+2025-09-29 00:07:12,218 - __main__ - INFO - Added chunk for page 0: 'TO THE HEADTEACHER'
+2025-09-29 00:07:12,218 - __main__ - INFO - this is chunk list for 0: ['HEADTEACHER', 'KILIMANI', 'JUNIOR']
+2025-09-29 00:07:12,218 - __main__ - INFO - Added chunk for page 0: 'HEADTEACHER KILIMANI JUNIOR'
+2025-09-29 00:07:12,218 - __main__ - INFO - this is chunk list for 0: ['JUNIOR', 'SCHOOL', 'P.O']
+2025-09-29 00:07:12,218 - __main__ - INFO - Added chunk for page 0: 'JUNIOR SCHOOL P.O'
+2025-09-29 00:07:12,219 - __main__ - INFO - this is chunk list for 0: ['P.O', 'BOX', '21557-00505']
+2025-09-29 00:07:12,219 - __main__ - INFO - Added chunk for page 0: 'P.O BOX 21557-00505'
+2025-09-29 00:07:12,219 - __main__ - INFO - this is chunk list for 0: ['21557-00505', 'NAIROBI', 'Dear']
+2025-09-29 00:07:12,219 - __main__ - INFO - Added chunk for page 0: '21557-00505 NAIROBI Dear'
+2025-09-29 00:07:12,219 - __main__ - INFO - this is chunk list for 0: ['Dear', 'sir/Madam', 'RE:']
+2025-09-29 00:07:12,219 - __main__ - INFO - Added chunk for page 0: 'Dear sir/Madam RE:'
+2025-09-29 00:07:12,219 - __main__ - INFO - this is chunk list for 0: ['RE:', 'APPLICATION', 'FOR']
+2025-09-29 00:07:12,219 - __main__ - INFO - Added chunk for page 0: 'RE: APPLICATION FOR'
+2025-09-29 00:07:12,219 - __main__ - INFO - this is chunk list for 0: ['FOR', 'A', 'PRIMARY']
+2025-09-29 00:07:12,219 - __main__ - INFO - Added chunk for page 0: 'FOR A PRIMARY'
+2025-09-29 00:07:12,219 - __main__ - INFO - this is chunk list for 0: ['PRIMARY', 'TEACHER', 'SCHOOL']
+2025-09-29 00:07:12,219 - __main__ - INFO - Added chunk for page 0: 'PRIMARY TEACHER SCHOOL'
+2025-09-29 00:07:12,219 - __main__ - INFO - this is chunk list for 0: ['SCHOOL', 'POSITION', 'I']
+2025-09-29 00:07:12,219 - __main__ - INFO - Added chunk for page 0: 'SCHOOL POSITION I'
+2025-09-29 00:07:12,220 - __main__ - INFO - this is chunk list for 0: ['I', 'wish', 'to']
+2025-09-29 00:07:12,220 - __main__ - INFO - Added chunk for page 0: 'I wish to'
+2025-09-29 00:07:12,220 - __main__ - INFO - this is chunk list for 0: ['to', 'apply', 'for']
+2025-09-29 00:07:12,220 - __main__ - INFO - Added chunk for page 0: 'to apply for'
+2025-09-29 00:07:12,220 - __main__ - INFO - this is chunk list for 0: ['for', 'the', 'position']
+2025-09-29 00:07:12,220 - __main__ - INFO - Added chunk for page 0: 'for the position'
+2025-09-29 00:07:12,220 - __main__ - INFO - this is chunk list for 0: ['position', 'of', 'a']
+2025-09-29 00:07:12,220 - __main__ - INFO - Added chunk for page 0: 'position of a'
+2025-09-29 00:07:12,220 - __main__ - INFO - this is chunk list for 0: ['a', 'pri', 'mary']
+2025-09-29 00:07:12,220 - __main__ - INFO - Added chunk for page 0: 'a pri mary'
+2025-09-29 00:07:12,220 - __main__ - INFO - this is chunk list for 0: ['mary', 'teacher', 'in']
+2025-09-29 00:07:12,220 - __main__ - INFO - Added chunk for page 0: 'mary teacher in'
+2025-09-29 00:07:12,220 - __main__ - INFO - this is chunk list for 0: ['in', 'your', 'school.']
+2025-09-29 00:07:12,220 - __main__ - INFO - Added chunk for page 0: 'in your school.'
+2025-09-29 00:07:12,220 - __main__ - INFO - this is chunk list for 0: ['school.', 'I', 'am']
+2025-09-29 00:07:12,220 - __main__ - INFO - Added chunk for page 0: 'school. I am'
+2025-09-29 00:07:12,220 - __main__ - INFO - this is chunk list for 0: ['am', 'a', 'trained']
+2025-09-29 00:07:12,220 - __main__ - INFO - Added chunk for page 0: 'am a trained'
+2025-09-29 00:07:12,221 - __main__ - INFO - this is chunk list for 0: ['trained', 'P1', 'teacher']
+2025-09-29 00:07:12,221 - __main__ - INFO - Added chunk for page 0: 'trained P1 teacher'
+2025-09-29 00:07:12,221 - __main__ - INFO - this is chunk list for 0: ['teacher', 'and', 'I']
+2025-09-29 00:07:12,221 - __main__ - INFO - Added chunk for page 0: 'teacher and I'
+2025-09-29 00:07:12,221 - __main__ - INFO - this is chunk list for 0: ['I', 'am', 'confident']
+2025-09-29 00:07:12,221 - __main__ - INFO - Added chunk for page 0: 'I am confident'
+2025-09-29 00:07:12,221 - __main__ - INFO - this is chunk list for 0: ['confident', 'that', 'my']
+2025-09-29 00:07:12,221 - __main__ - INFO - Added chunk for page 0: 'confident that my'
+2025-09-29 00:07:12,221 - __main__ - INFO - this is chunk list for 0: ['my', 'educational', 'background']
+2025-09-29 00:07:12,221 - __main__ - INFO - Added chunk for page 0: 'my educational background'
+2025-09-29 00:07:12,221 - __main__ - INFO - this is chunk list for 0: ['background', 'and', 'work']
+2025-09-29 00:07:12,221 - __main__ - INFO - Added chunk for page 0: 'background and work'
+2025-09-29 00:07:12,221 - __main__ - INFO - this is chunk list for 0: ['work', 'experience', 'skills']
+2025-09-29 00:07:12,221 - __main__ - INFO - Added chunk for page 0: 'work experience skills'
+2025-09-29 00:07:12,221 - __main__ - INFO - this is chunk list for 0: ['skills', 'will', 'be']
+2025-09-29 00:07:12,221 - __main__ - INFO - Added chunk for page 0: 'skills will be'
+2025-09-29 00:07:12,221 - __main__ - INFO - this is chunk list for 0: ['be', 'of', 'great']
+2025-09-29 00:07:12,221 - __main__ - INFO - Added chunk for page 0: 'be of great'
+2025-09-29 00:07:12,221 - __main__ - INFO - this is chunk list for 0: ['great', 'value', 'to']
+2025-09-29 00:07:12,221 - __main__ - INFO - Added chunk for page 0: 'great value to'
+2025-09-29 00:07:12,222 - __main__ - INFO - this is chunk list for 0: ['to', 'your', 'school.']
+2025-09-29 00:07:12,222 - __main__ - INFO - Added chunk for page 0: 'to your school.'
+2025-09-29 00:07:12,222 - __main__ - INFO - this is chunk list for 0: ['school.', 'As', 'a']
+2025-09-29 00:07:12,222 - __main__ - INFO - Added chunk for page 0: 'school. As a'
+2025-09-29 00:07:12,222 - __main__ - INFO - this is chunk list for 0: ['a', 'gr', 'aduate']
+2025-09-29 00:07:12,222 - __main__ - INFO - Added chunk for page 0: 'a gr aduate'
+2025-09-29 00:07:12,222 - __main__ - INFO - this is chunk list for 0: ['aduate', 'teacher,', 'have']
+2025-09-29 00:07:12,222 - __main__ - INFO - Added chunk for page 0: 'aduate teacher, have'
+2025-09-29 00:07:12,222 - __main__ - INFO - this is chunk list for 0: ['have', 'experienced', 'many']
+2025-09-29 00:07:12,222 - __main__ - INFO - Added chunk for page 0: 'have experienced many'
+2025-09-29 00:07:12,222 - __main__ - INFO - this is chunk list for 0: ['many', 'skills', 'to']
+2025-09-29 00:07:12,222 - __main__ - INFO - Added chunk for page 0: 'many skills to'
+2025-09-29 00:07:12,222 - __main__ - INFO - this is chunk list for 0: ['to', 'work', 'with']
+2025-09-29 00:07:12,222 - __main__ - INFO - Added chunk for page 0: 'to work with'
+2025-09-29 00:07:12,222 - __main__ - INFO - this is chunk list for 0: ['with', 'a', 'varie']
+2025-09-29 00:07:12,222 - __main__ - INFO - Added chunk for page 0: 'with a varie'
+2025-09-29 00:07:12,222 - __main__ - INFO - this is chunk list for 0: ['varie', 'ty', 'of']
+2025-09-29 00:07:12,222 - __main__ - INFO - Added chunk for page 0: 'varie ty of'
+2025-09-29 00:07:12,222 - __main__ - INFO - this is chunk list for 0: ['of', 'professional', 'teaching']
+2025-09-29 00:07:12,222 - __main__ - INFO - Added chunk for page 0: 'of professional teaching'
+2025-09-29 00:07:12,222 - __main__ - INFO - this is chunk list for 0: ['teaching', 'team', 'and']
+2025-09-29 00:07:12,223 - __main__ - INFO - Added chunk for page 0: 'teaching team and'
+2025-09-29 00:07:12,223 - __main__ - INFO - this is chunk list for 0: ['and', 'gained', 'valuable']
+2025-09-29 00:07:12,223 - __main__ - INFO - Added chunk for page 0: 'and gained valuable'
+2025-09-29 00:07:12,223 - __main__ - INFO - this is chunk list for 0: ['valuable', 'insight', 'into']
+2025-09-29 00:07:12,223 - __main__ - INFO - Added chunk for page 0: 'valuable insight into'
+2025-09-29 00:07:12,223 - __main__ - INFO - this is chunk list for 0: ['into', 'the', 'role']
+2025-09-29 00:07:12,223 - __main__ - INFO - Added chunk for page 0: 'into the role'
+2025-09-29 00:07:12,223 - __main__ - INFO - this is chunk list for 0: ['role', 'of', 'a']
+2025-09-29 00:07:12,223 - __main__ - INFO - Added chunk for page 0: 'role of a'
+2025-09-29 00:07:12,223 - __main__ - INFO - this is chunk list for 0: ['a', 'primary', 'school']
+2025-09-29 00:07:12,223 - __main__ - INFO - Added chunk for page 0: 'a primary school'
+2025-09-29 00:07:12,223 - __main__ - INFO - this is chunk list for 0: ['school', 'teacher.', 'Previously,']
+2025-09-29 00:07:12,223 - __main__ - INFO - Added chunk for page 0: 'school teacher. Previously,'
+2025-09-29 00:07:12,223 - __main__ - INFO - this is chunk list for 0: ['Previously,', 'I', 'worked']
+2025-09-29 00:07:12,224 - __main__ - INFO - Added chunk for page 0: 'Previously, I worked'
+2025-09-29 00:07:12,224 - __main__ - INFO - this is chunk list for 0: ['worked', 'in', 'a']
+2025-09-29 00:07:12,224 - __main__ - INFO - Added chunk for page 0: 'worked in a'
+2025-09-29 00:07:12,224 - __main__ - INFO - this is chunk list for 0: ['a', 'school', 'where']
+2025-09-29 00:07:12,224 - __main__ - INFO - Added chunk for page 0: 'a school where'
+2025-09-29 00:07:12,224 - __main__ - INFO - this is chunk list for 0: ['where', 'I', 'managed']
+2025-09-29 00:07:12,224 - __main__ - INFO - Added chunk for page 0: 'where I managed'
+2025-09-29 00:07:12,224 - __main__ - INFO - this is chunk list for 0: ['managed', 'to', 'demonstrate']
+2025-09-29 00:07:12,224 - __main__ - INFO - Added chunk for page 0: 'managed to demonstrate'
+2025-09-29 00:07:12,224 - __main__ - INFO - this is chunk list for 0: ['demonstrate', 'excellent', 'planning,']
+2025-09-29 00:07:12,225 - __main__ - INFO - Added chunk for page 0: 'demonstrate excellent planning,'
+2025-09-29 00:07:12,225 - __main__ - INFO - this is chunk list for 0: ['planning,', 'communication', 'and']
+2025-09-29 00:07:12,225 - __main__ - INFO - Added chunk for page 0: 'planning, communication and'
+2025-09-29 00:07:12,225 - __main__ - INFO - this is chunk list for 0: ['and', 'teamwork', 'skills.']
+2025-09-29 00:07:12,225 - __main__ - INFO - Added chunk for page 0: 'and teamwork skills.'
+2025-09-29 00:07:12,225 - __main__ - INFO - this is chunk list for 0: ['skills.', 'My', 'pos']
+2025-09-29 00:07:12,225 - __main__ - INFO - Added chunk for page 0: 'skills. My pos'
+2025-09-29 00:07:12,225 - __main__ - INFO - this is chunk list for 0: ['pos', 'ition', 'for']
+2025-09-29 00:07:12,225 - __main__ - INFO - Added chunk for page 0: 'pos ition for'
+2025-09-29 00:07:12,226 - __main__ - INFO - this is chunk list for 0: ['for', 'the', 'young']
+2025-09-29 00:07:12,226 - __main__ - INFO - Added chunk for page 0: 'for the young'
+2025-09-29 00:07:12,226 - __main__ - INFO - this is chunk list for 0: ['young', 'has', 'enabl']
+2025-09-29 00:07:12,226 - __main__ - INFO - Added chunk for page 0: 'young has enabl'
+2025-09-29 00:07:12,226 - __main__ - INFO - this is chunk list for 0: ['enabl', 'ed', 'me']
+2025-09-29 00:07:12,226 - __main__ - INFO - Added chunk for page 0: 'enabl ed me'
+2025-09-29 00:07:12,226 - __main__ - INFO - this is chunk list for 0: ['me', 'to', 'pro']
+2025-09-29 00:07:12,226 - __main__ - INFO - Added chunk for page 0: 'me to pro'
+2025-09-29 00:07:12,226 - __main__ - INFO - this is chunk list for 0: ['pro', 'vide', 'excellent']
+2025-09-29 00:07:12,226 - __main__ - INFO - Added chunk for page 0: 'pro vide excellent'
+2025-09-29 00:07:12,226 - __main__ - INFO - this is chunk list for 0: ['excellent', 'learning', 'opportunities']
+2025-09-29 00:07:12,226 - __main__ - INFO - Added chunk for page 0: 'excellent learning opportunities'
+2025-09-29 00:07:12,226 - __main__ - INFO - this is chunk list for 0: ['opportunities', 'within', 'each']
+2025-09-29 00:07:12,226 - __main__ - INFO - Added chunk for page 0: 'opportunities within each'
+2025-09-29 00:07:12,226 - __main__ - INFO - this is chunk list for 0: ['each', 'classroom', 'I']
+2025-09-29 00:07:12,226 - __main__ - INFO - Added chunk for page 0: 'each classroom I'
+2025-09-29 00:07:12,227 - __main__ - INFO - this is chunk list for 0: ['I', 'have', 'been']
+2025-09-29 00:07:12,227 - __main__ - INFO - Added chunk for page 0: 'I have been'
+2025-09-29 00:07:12,227 - __main__ - INFO - this is chunk list for 0: ['been', 'placed.', 'I']
+2025-09-29 00:07:12,227 - __main__ - INFO - Added chunk for page 0: 'been placed. I'
+2025-09-29 00:07:12,227 - __main__ - INFO - this is chunk list for 0: ['I', 'am', 'a']
+2025-09-29 00:07:12,227 - __main__ - INFO - Added chunk for page 0: 'I am a'
+2025-09-29 00:07:12,227 - __main__ - INFO - this is chunk list for 0: ['a', 'dedicated', 'teacher']
+2025-09-29 00:07:12,227 - __main__ - INFO - Added chunk for page 0: 'a dedicated teacher'
+2025-09-29 00:07:12,227 - __main__ - INFO - this is chunk list for 0: ['teacher', 'with', 'a']
+2025-09-29 00:07:12,227 - __main__ - INFO - Added chunk for page 0: 'teacher with a'
+2025-09-29 00:07:12,227 - __main__ - INFO - this is chunk list for 0: ['a', 'great', 'deal']
+2025-09-29 00:07:12,227 - __main__ - INFO - Added chunk for page 0: 'a great deal'
+2025-09-29 00:07:12,227 - __main__ - INFO - this is chunk list for 0: ['deal', 'of', 'Knowledge']
+2025-09-29 00:07:12,227 - __main__ - INFO - Added chunk for page 0: 'deal of Knowledge'
+2025-09-29 00:07:12,227 - __main__ - INFO - this is chunk list for 0: ['Knowledge', 'and', 'skills']
+2025-09-29 00:07:12,227 - __main__ - INFO - Added chunk for page 0: 'Knowledge and skills'
+2025-09-29 00:07:12,227 - __main__ - INFO - this is chunk list for 0: ['skills', 'as', 'well']
+2025-09-29 00:07:12,227 - __main__ - INFO - Added chunk for page 0: 'skills as well'
+2025-09-29 00:07:12,227 - __main__ - INFO - this is chunk list for 0: ['well', 'as', 'passion']
+2025-09-29 00:07:12,228 - __main__ - INFO - Added chunk for page 0: 'well as passion'
+2025-09-29 00:07:12,228 - __main__ - INFO - this is chunk list for 0: ['passion', 'and', 'enthusi']
+2025-09-29 00:07:12,228 - __main__ - INFO - Added chunk for page 0: 'passion and enthusi'
+2025-09-29 00:07:12,228 - __main__ - INFO - this is chunk list for 0: ['enthusi', 'asm', 'for']
+2025-09-29 00:07:12,228 - __main__ - INFO - Added chunk for page 0: 'enthusi asm for'
+2025-09-29 00:07:12,228 - __main__ - INFO - this is chunk list for 0: ['for', 'working', 'with']
+2025-09-29 00:07:12,228 - __main__ - INFO - Added chunk for page 0: 'for working with'
+2025-09-29 00:07:12,228 - __main__ - INFO - this is chunk list for 0: ['with', 'chi', 'ldren']
+2025-09-29 00:07:12,228 - __main__ - INFO - Added chunk for page 0: 'with chi ldren'
+2025-09-29 00:07:12,228 - __main__ - INFO - this is chunk list for 0: ['ldren', 'and', 'teaching']
+2025-09-29 00:07:12,228 - __main__ - INFO - Added chunk for page 0: 'ldren and teaching'
+2025-09-29 00:07:12,228 - __main__ - INFO - this is chunk list for 0: ['teaching', 'in', 'the']
+2025-09-29 00:07:12,228 - __main__ - INFO - Added chunk for page 0: 'teaching in the'
+2025-09-29 00:07:12,228 - __main__ - INFO - this is chunk list for 0: ['the', 'area', 'of']
+2025-09-29 00:07:12,228 - __main__ - INFO - Added chunk for page 0: 'the area of'
+2025-09-29 00:07:12,228 - __main__ - INFO - this is chunk list for 0: ['of', 'primary', 'school']
+2025-09-29 00:07:12,228 - __main__ - INFO - Added chunk for page 0: 'of primary school'
+2025-09-29 00:07:12,228 - __main__ - INFO - this is chunk list for 0: ['school', 'education.', 'I']
+2025-09-29 00:07:12,228 - __main__ - INFO - Added chunk for page 0: 'school education. I'
+2025-09-29 00:07:12,228 - __main__ - INFO - this is chunk list for 0: ['I', 'am', 'self']
+2025-09-29 00:07:12,229 - __main__ - INFO - Added chunk for page 0: 'I am self'
+2025-09-29 00:07:12,229 - __main__ - INFO - this is chunk list for 0: ['self', 'motivated', 'and']
+2025-09-29 00:07:12,229 - __main__ - INFO - Added chunk for page 0: 'self motivated and'
+2025-09-29 00:07:12,229 - __main__ - INFO - this is chunk list for 0: ['and', 'can', 'work']
+2025-09-29 00:07:12,229 - __main__ - INFO - Added chunk for page 0: 'and can work'
+2025-09-29 00:07:12,229 - __main__ - INFO - this is chunk list for 0: ['work', 'cooper', 'atively']
+2025-09-29 00:07:12,229 - __main__ - INFO - Added chunk for page 0: 'work cooper atively'
+2025-09-29 00:07:12,229 - __main__ - INFO - this is chunk list for 0: ['atively', 'in', 'a']
+2025-09-29 00:07:12,229 - __main__ - INFO - Added chunk for page 0: 'atively in a'
+2025-09-29 00:07:12,229 - __main__ - INFO - this is chunk list for 0: ['a', 'team', 'situation']
+2025-09-29 00:07:12,229 - __main__ - INFO - Added chunk for page 0: 'a team situation'
+2025-09-29 00:07:12,229 - __main__ - INFO - this is chunk list for 0: ['situation', 'or', 'on']
+2025-09-29 00:07:12,229 - __main__ - INFO - Added chunk for page 0: 'situation or on'
+2025-09-29 00:07:12,229 - __main__ - INFO - this is chunk list for 0: ['on', 'own.', 'I']
+2025-09-29 00:07:12,229 - __main__ - INFO - Added chunk for page 0: 'on own. I'
+2025-09-29 00:07:12,229 - __main__ - INFO - this is chunk list for 0: ['I', 'have', 'always']
+2025-09-29 00:07:12,229 - __main__ - INFO - Added chunk for page 0: 'I have always'
+2025-09-29 00:07:12,229 - __main__ - INFO - this is chunk list for 0: ['always', 'provided', 'myself']
+2025-09-29 00:07:12,229 - __main__ - INFO - Added chunk for page 0: 'always provided myself'
+2025-09-29 00:07:12,229 - __main__ - INFO - this is chunk list for 0: ['myself', 'on', 'being']
+2025-09-29 00:07:12,230 - __main__ - INFO - Added chunk for page 0: 'myself on being'
+2025-09-29 00:07:12,230 - __main__ - INFO - this is chunk list for 0: ['being', 'able', 'to']
+2025-09-29 00:07:12,230 - __main__ - INFO - Added chunk for page 0: 'being able to'
+2025-09-29 00:07:12,230 - __main__ - INFO - this is chunk list for 0: ['to', 'fit', 'and']
+2025-09-29 00:07:12,230 - __main__ - INFO - Added chunk for page 0: 'to fit and'
+2025-09-29 00:07:12,230 - __main__ - INFO - this is chunk list for 0: ['and', 'get', 'along']
+2025-09-29 00:07:12,230 - __main__ - INFO - Added chunk for page 0: 'and get along'
+2025-09-29 00:07:12,230 - __main__ - INFO - this is chunk list for 0: ['along', 'with', 'others.']
+2025-09-29 00:07:12,230 - __main__ - INFO - Added chunk for page 0: 'along with others.'
+2025-09-29 00:07:12,230 - __main__ - INFO - this is chunk list for 0: ['others.', 'Please', 'find']
+2025-09-29 00:07:12,230 - __main__ - INFO - Added chunk for page 0: 'others. Please find'
+2025-09-29 00:07:12,230 - __main__ - INFO - this is chunk list for 0: ['find', 'attached', 'copy']
+2025-09-29 00:07:12,230 - __main__ - INFO - Added chunk for page 0: 'find attached copy'
+2025-09-29 00:07:12,230 - __main__ - INFO - this is chunk list for 0: ['copy', 'of', 'my']
+2025-09-29 00:07:12,230 - __main__ - INFO - Added chunk for page 0: 'copy of my'
+2025-09-29 00:07:12,230 - __main__ - INFO - this is chunk list for 0: ['my', 'Curriculum', 'Vitae']
+2025-09-29 00:07:12,231 - __main__ - INFO - Added chunk for page 0: 'my Curriculum Vitae'
+2025-09-29 00:07:12,231 - __main__ - INFO - this is chunk list for 0: ['Vitae', 'along', 'with']
+2025-09-29 00:07:12,231 - __main__ - INFO - Added chunk for page 0: 'Vitae along with'
+2025-09-29 00:07:12,231 - __main__ - INFO - this is chunk list for 0: ['with', 'my', 'documents.']
+2025-09-29 00:07:12,231 - __main__ - INFO - Added chunk for page 0: 'with my documents.'
+2025-09-29 00:07:12,231 - __main__ - INFO - this is chunk list for 0: ['documents.', 'Do', 'not']
+2025-09-29 00:07:12,231 - __main__ - INFO - Added chunk for page 0: 'documents. Do not'
+2025-09-29 00:07:12,232 - __main__ - INFO - this is chunk list for 0: ['not', 'hesitate', 'to']
+2025-09-29 00:07:12,232 - __main__ - INFO - Added chunk for page 0: 'not hesitate to'
+2025-09-29 00:07:12,232 - __main__ - INFO - this is chunk list for 0: ['to', 'contact', 'me']
+2025-09-29 00:07:12,232 - __main__ - INFO - Added chunk for page 0: 'to contact me'
+2025-09-29 00:07:12,232 - __main__ - INFO - this is chunk list for 0: ['me', 'as', 'at']
+2025-09-29 00:07:12,232 - __main__ - INFO - Added chunk for page 0: 'me as at'
+2025-09-29 00:07:12,232 - __main__ - INFO - this is chunk list for 0: ['at', 'your', 'school']
+2025-09-29 00:07:12,232 - __main__ - INFO - Added chunk for page 0: 'at your school'
+2025-09-29 00:07:12,232 - __main__ - INFO - this is chunk list for 0: ['school', 'convenience', 'as']
+2025-09-29 00:07:12,232 - __main__ - INFO - Added chunk for page 0: 'school convenience as'
+2025-09-29 00:07:12,232 - __main__ - INFO - this is chunk list for 0: ['as', 'I', 'look']
+2025-09-29 00:07:12,232 - __main__ - INFO - Added chunk for page 0: 'as I look'
+2025-09-29 00:07:12,233 - __main__ - INFO - this is chunk list for 0: ['look', 'forward', 'to']
+2025-09-29 00:07:12,233 - __main__ - INFO - Added chunk for page 0: 'look forward to'
+2025-09-29 00:07:12,233 - __main__ - INFO - this is chunk list for 0: ['to', 'further', 'discussing']
+2025-09-29 00:07:12,233 - __main__ - INFO - Added chunk for page 0: 'to further discussing'
+2025-09-29 00:07:12,233 - __main__ - INFO - this is chunk list for 0: ['discussing', 'this', 'application']
+2025-09-29 00:07:12,233 - __main__ - INFO - Added chunk for page 0: 'discussing this application'
+2025-09-29 00:07:12,234 - __main__ - INFO - this is chunk list for 0: ['application', 'with', 'you.']
+2025-09-29 00:07:12,234 - __main__ - INFO - Added chunk for page 0: 'application with you.'
+2025-09-29 00:07:12,234 - __main__ - INFO - this is chunk list for 0: ['you.', 'Thank', 'you']
+2025-09-29 00:07:12,234 - __main__ - INFO - Added chunk for page 0: 'you. Thank you'
+2025-09-29 00:07:12,234 - __main__ - INFO - this is chunk list for 0: ['you', 'for', 'taking']
+2025-09-29 00:07:12,234 - __main__ - INFO - Added chunk for page 0: 'you for taking'
+2025-09-29 00:07:12,234 - __main__ - INFO - this is chunk list for 0: ['taking', 'your', 'time']
+2025-09-29 00:07:12,234 - __main__ - INFO - Added chunk for page 0: 'taking your time'
+2025-09-29 00:07:12,234 - __main__ - INFO - this is chunk list for 0: ['time', 'to', 'consider']
+2025-09-29 00:07:12,234 - __main__ - INFO - Added chunk for page 0: 'time to consider'
+2025-09-29 00:07:12,234 - __main__ - INFO - this is chunk list for 0: ['consider', 'my', 'suitability']
+2025-09-29 00:07:12,235 - __main__ - INFO - Added chunk for page 0: 'consider my suitability'
+2025-09-29 00:07:12,235 - __main__ - INFO - this is chunk list for 0: ['suitability', 'for', 'your']
+2025-09-29 00:07:12,235 - __main__ - INFO - Added chunk for page 0: 'suitability for your'
+2025-09-29 00:07:12,235 - __main__ - INFO - this is chunk list for 0: ['your', 'school', 'and']
+2025-09-29 00:07:12,235 - __main__ - INFO - Added chunk for page 0: 'your school and'
+2025-09-29 00:07:12,235 - __main__ - INFO - this is chunk list for 0: ['and', 'confidence', 'that']
+2025-09-29 00:07:12,235 - __main__ - INFO - Added chunk for page 0: 'and confidence that'
+2025-09-29 00:07:12,235 - __main__ - INFO - this is chunk list for 0: ['that', 'I', 'can']
+2025-09-29 00:07:12,235 - __main__ - INFO - Added chunk for page 0: 'that I can'
+2025-09-29 00:07:12,235 - __main__ - INFO - this is chunk list for 0: ['can', 'bring', 'the']
+2025-09-29 00:07:12,235 - __main__ - INFO - Added chunk for page 0: 'can bring the'
+2025-09-29 00:07:12,235 - __main__ - INFO - this is chunk list for 0: ['the', 'necessary', 'skills.']
+2025-09-29 00:07:12,235 - __main__ - INFO - Added chunk for page 0: 'the necessary skills.'
+2025-09-29 00:07:12,235 - __main__ - INFO - this is chunk list for 0: ['skills.', 'Yours', 'sincerely,']
+2025-09-29 00:07:12,235 - __main__ - INFO - Added chunk for page 0: 'skills. Yours sincerely,'
+2025-09-29 00:07:12,235 - __main__ - INFO - this is chunk list for 0: ['sincerely,', 'ACHIENG', 'MICHELE']
+2025-09-29 00:07:12,236 - __main__ - INFO - Added chunk for page 0: 'sincerely, ACHIENG MICHELE'
+2025-09-29 00:07:12,236 - __main__ - INFO - this is chunk list for 0: ['MICHELE']
+2025-09-29 00:07:12,236 - __main__ - INFO - Added chunk for page 0: 'MICHELE'
+2025-09-29 00:07:12,236 - __main__ - INFO - this is words after splitting based on white space: []
+2025-09-29 00:07:12,236 - __main__ - INFO - 
+--- Processing Page 1 ---
+2025-09-29 00:07:12,236 - __main__ - INFO - Content (Cleaned Words): []
