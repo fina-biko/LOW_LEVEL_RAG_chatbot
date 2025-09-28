@@ -1,41 +1,36 @@
- 
-
 
 from abc import ABC, abstractmethod
 from typing import List, Tuple
-from utilities.create_logger import create_logger
+
 import logging
 
 from utilities.exception import PdfExtractionError
-
-
-logger = logging.getLogger(__name__)
-
-
+from utilities.create_logger import create_logger
+logger=create_logger(__name__)
 class DocumentExtractor(ABC):
     extension: str  # Expected to be defined in subclasses
+   
 
     def __init__(self,filepath:str) -> None:
         super().__init__()
         self.filepath=filepath
        
-
-
+       
     #any time a subclass inherits from  you , push it to be reigistred at the factory registry
-    def __init_subclass__(cls, **kwargs: dict):
-        super().__init_subclass__(**kwargs)
+ 
+    
         #get the name of the subclass when it inheirits from DocumentExtractor
-        name=cls.__name__
+        name=self.__class__.__name__
         #get the extension it has defined
-        if not hasattr(cls,'extension'):
+        if not hasattr(self.__class__,'extension'):
             raise PdfExtractionError(f"Subclass {name} must define an 'extension' class variable.")
         else:
-           ext:str=cls.extension
+           ext:str=self.__class__.extension
 
         #call the registry and register the ext provided and the class type
         from .DataextractorFactory import ExtractorFactory
-        ExtractorFactory.register_extractor(ext, cls)
-        create_logger(__name__,level=logging.INFO).info(f"Registered  new extractor {name} for extension {ext}")
+        ExtractorFactory.register_extractor(ext, self.__class__)
+        create_logger(__name__,level=logging.INFO).info(f"Documentextrator: Registered  new extractor {name} for extension {ext}")
        
 
     @abstractmethod
@@ -47,8 +42,6 @@ class DocumentExtractor(ABC):
 class PDFExtractor(DocumentExtractor):
     extension = ".pdf"
 
-
-    
     def extract(self, ) -> List[Tuple[int, str]]:
         """
         Extract text from a PDF file, returning page numbers and their corresponding text.
@@ -64,7 +57,7 @@ class PDFExtractor(DocumentExtractor):
                 - str: The extracted text content of that page.
 
         Raises:
-            Exception: If any error occurs during PDF reading or text extraction.
+            PdfExtractionError: If any error occurs during PDF reading or text extraction.
 
         Example:
             >>> extractor = PDFExtractor("sample.pdf")
@@ -94,7 +87,7 @@ if __name__ == "__main__":
     filepath_1=r"C:\Users\User\Desktop\michelle.pdf"
     filepath = r"C:\\Users\\User\\Downloads\\Cloud Concepts [Slides].pdf"
     filepath2=r"C:\Users\User\Downloads\Cloud Concepts [Slid].pdf"
-    pdf_extractor = PDFExtractor(filepath2)
+    pdf_extractor = PDFExtractor(filepath_1)
     extracted_data = pdf_extractor.extract()
    
     print(extracted_data)

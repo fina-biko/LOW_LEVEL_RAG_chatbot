@@ -6,10 +6,11 @@ from utilities.create_logger import create_logger
 from utilities.exception import DataFactoryError
 import logging
 from pathlib import Path
-logger= create_logger(__name__,level=logging.INFO)
+
 
 class ExtractorFactory:
     #have an empty dictionary to store the extractors
+    logger= create_logger(__name__,level=logging.INFO)
     _registry : dict[str, type] = {}
 
     #have a class that regosters the extractors
@@ -22,13 +23,13 @@ class ExtractorFactory:
         #take the class itself, using class__name__
         #register it as key value pair
         cls._registry[ext]=class_type
-        logger.info(f"registered extractor for {ext} : {class_type}")
+        cls.logger.info(f"registered extractor for {ext} : {class_type}")
         return cls._registry
     
     # a method to show all the registred extractors
     @classmethod
     def show_registered_extractors(cls):
-        logger.info(f"Registered extractors: {cls._registry}")
+        cls.logger.info(f"Registered extractors: {cls._registry}")
 
         return cls._registry
     
@@ -52,11 +53,11 @@ class ExtractorFactory:
                 
                 
                 ext=os.path.splitext(filepath)[1]
-                logger.info(f"Creating extractor for file: {filepath} with extension: {ext}")
+                cls.logger.info(f"Creating extractor for file: {filepath} with extension: {ext}")
                 #check if the file ext is in the registry
                 if ext in cls._registry:
                     class_type=cls._registry[ext]
-                    logger.info(f"Found extractor class {class_type} for extension {ext}")
+                    cls.logger.info(f"Found extractor class {class_type} for extension {ext}")
                     #return an instance of the class
                     return class_type(filepath)
                 else:

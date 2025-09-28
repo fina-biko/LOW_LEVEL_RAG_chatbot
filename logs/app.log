@@ -1,44 +1,6 @@
-2025-09-27 21:07:11,924 - utilities.exception - ERROR - The file path C:\Users\User\Downloads\Cloud Concepts [Slid].pdf does not exist.  raised by DataFactoryError class  
-NoneType: None
-2025-09-27 21:07:11,929 - utilities.exception - ERROR - The file path C:\Users\User\Downloads\Cloud Concepts [Slid].pdf does not exist.  raised by DataFactoryError class  
-Traceback (most recent call last):
-  File "C:\Users\User\Desktop\L0W_LEVEL_RAG\src\low_level_rag\DataextractorFactory.py", line 68, in find_extractor
-    raise DataFactoryError(message=f"The file path {filepath} does not exist.")
-utilities.exception.DataFactoryError: The file path C:\Users\User\Downloads\Cloud Concepts [Slid].pdf does not exist.
-
-_________________________________________
-_______________________________________-2025-09-27 21:09:00,148 - utilities.exception - ERROR - The file path C:\Users\User\Downloads\Cloud Concepts [Slid].pdf does not exist.  raised by DataFactoryError class  
-NoneType: None
-2025-09-27 21:09:00,150 - utilities.exception - ERROR - The file path C:\Users\User\Downloads\Cloud Concepts [Slid].pdf does not exist.  raised by DataFactoryError class  
-Traceback (most recent call last):
-  File "C:\Users\User\Desktop\L0W_LEVEL_RAG\src\low_level_rag\DataextractorFactory.py", line 68, in find_extractor
-    raise DataFactoryError(message=f"The file path {filepath} does not exist.")
-utilities.exception.DataFactoryError: The file path C:\Users\User\Downloads\Cloud Concepts [Slid].pdf does not exist.
-2025-09-27 21:12:09,856 - __main__ - INFO - Creating extractor for file: C:\Users\User\Downloads\Cloud Concepts [Slides].pdf with extension: .pdf
-2025-09-27 21:12:09,866 - utilities.exception - ERROR - No extractor registered for extension: .pdf  raised by DataFactoryError class  
-NoneType: None
-2025-09-27 21:12:09,879 - utilities.exception - ERROR - The file path C:\Users\User\Downloads\Cloud Concepts [Slides].pdf does not exist.  raised by DataFactoryError class  
-Traceback (most recent call last):
-  File "C:\Users\User\Desktop\L0W_LEVEL_RAG\src\low_level_rag\DataextractorFactory.py", line 65, in find_extractor
-    raise DataFactoryError(error_msg)
-utilities.exception.DataFactoryError: No extractor registered for extension: .pdf
-2025-09-27 21:14:03,683 - src.low_level_rag.DataextractorFactory - INFO - registered extractor for .pdf : <class '__main__.PDFExtractor'>
-2025-09-27 21:14:03,685 - __main__ - INFO - Registered  new extractor PDFExtractor for extension .pdf
-2025-09-27 21:14:06,094 - __main__ - INFO - Successfully extracted text from PDF: C:\Users\User\Desktop\michelle.pdf
-2025-09-27 21:15:11,214 - src.low_level_rag.DataextractorFactory - INFO - registered extractor for .pdf : <class '__main__.PDFExtractor'>
-2025-09-27 21:15:11,217 - __main__ - INFO - Registered  new extractor PDFExtractor for extension .pdf
-2025-09-27 21:15:13,120 - __main__ - INFO - Successfully extracted text from PDF: C:\\Users\\User\\Downloads\\Cloud Concepts [Slides].pdf
-2025-09-27 21:16:00,808 - src.low_level_rag.DataextractorFactory - INFO - registered extractor for .pdf : <class '__main__.PDFExtractor'>
-2025-09-27 21:16:00,812 - __main__ - INFO - Registered  new extractor PDFExtractor for extension .pdf
-2025-09-27 21:16:01,299 - __main__ - ERROR - Error extracting text from PDF: C:\Users\User\Downloads\Cloud Concepts [Slid].pdf, Error: [Errno 2] No such file or directory: 'C:\\Users\\User\\Downloads\\Cloud Concepts [Slid].pdf'
-2025-09-27 21:16:01,301 - utilities.exception - ERROR - C:\Users\User\Downloads\Cloud Concepts [Slid].pdf  raised by PdfExtractionError class  
-Traceback (most recent call last):
-  File "C:\Users\User\Desktop\L0W_LEVEL_RAG\src\low_level_rag\extractor.py", line 84, in extract
-    reader_object=PdfReader(self.filepath)
-  File "C:\Users\User\AppData\Roaming\Python\Python313\site-packages\pypdf\_reader.py", line 131, in __init__
-    self._initialize_stream(stream)
-    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
-  File "C:\Users\User\AppData\Roaming\Python\Python313\site-packages\pypdf\_reader.py", line 150, in _initialize_stream
-    with open(stream, "rb") as fh:
-         ~~~~^^^^^^^^^^^^^^
-FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\User\\Downloads\\Cloud Concepts [Slid].pdf'
+2025-09-28 16:50:10,920 - __main__ - INFO - Starting the preprocessing pipeline...
+2025-09-28 16:50:10,932 - src.low_level_rag.DataextractorFactory - INFO - registered extractor for .pdf : <class 'src.low_level_rag.extractor.PDFExtractor'>
+2025-09-28 16:50:10,933 - src.low_level_rag.extractor - INFO - Documentextrator: Registered  new extractor PDFExtractor for extension .pdf
+2025-09-28 16:50:11,235 - src.low_level_rag.extractor - INFO - Successfully extracted text from PDF: C:\Users\User\Desktop\michelle.pdf
+2025-09-28 16:50:11,235 - __main__ - INFO - shape detected as 2D list of tuples
+2025-09-28 16:50:11,235 - __main__ - INFO - Input text  detected is: 1D

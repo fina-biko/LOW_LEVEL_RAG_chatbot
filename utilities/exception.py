@@ -59,6 +59,8 @@ class PdfExtractionError(BaseCustomException):
     pass
 class DataFactoryError(BaseCustomException):
     pass
+class PreprocessError(BaseCustomException):
+    pass
 
 
 
