@@ -24,6 +24,7 @@ files=[
     'src/low_level_rag/DataextractorFactory.py',
     'src/preprocess.py',
     'src/chunking.py',
+    'src/embedding.py',
     'src/vector_store.py',
     
     'config/config.yaml',

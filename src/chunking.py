@@ -106,7 +106,9 @@ if __name__ == "__main__":
 
         # --- Test Case 3: Error Handling (Invalid Type) ---
         #  print("--- Test Case 3: Error Handling ---")
-         chunk_text(cleaned_from_tuples)
+         text=chunk_text(cleaned_from_tuples)
+         print(len(text))
+         print(text)
 
     except Exception as e:
      logger.error("An unexpected error occurred in the main execution block.")
